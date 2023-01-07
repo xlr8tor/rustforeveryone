@@ -21,5 +21,5 @@ fn main() {
         text.to_string()
     };
 
-    println!("{}", content)
+    println!("{}", content.to_uppercase())
 }

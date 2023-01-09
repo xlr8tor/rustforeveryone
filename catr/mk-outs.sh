@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -u
+
 ROOT="tests/inputs"
 OUT_DIR="tests/expected"
 
@@ -14,7 +15,7 @@ ALL="$EMPTY $FOX $SPIDERS $BUSTLE"
 
 for FILE in $ALL; do
     BASENAME=$(basename "$FILE")
-    cat $FILE > ${OUT_DIR}/${BASENAME}.out
+    cat    $FILE > ${OUT_DIR}/${BASENAME}.out
     cat -n $FILE > ${OUT_DIR}/${BASENAME}.n.out
     cat -b $FILE > ${OUT_DIR}/${BASENAME}.b.out
 done

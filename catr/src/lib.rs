@@ -33,9 +33,9 @@ pub fn get_args() -> MyResult<Config> {
                 .conflicts_with("number_nonblank"),
         )
         .arg(
-            Arg::with_name("number_nonblamk")
+            Arg::with_name("number_nonblank")
                 .short("b")
-                .long("number_nonblank")
+                .long("number-nonblank")
                 .help("Number non-blank lines")
                 .takes_value(false),
         )
@@ -65,6 +65,8 @@ pub fn run(config: Config) -> MyResult<()> {
                         } else {
                             println!();
                         }
+                    } else {
+                        println!("{}", line);
                     }
                 }
             }
